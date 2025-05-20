@@ -1,56 +1,71 @@
+
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Accueil - Storino VIP</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <style>
-        body { background-color: white; color: #333; font-family: sans-serif; }
-        header, footer { background-color: #8B0000; color: white; padding: 15px 0; }
-        header h1 { color: goldenrod; margin: 0; }
-        nav a { color: white; margin: 0 12px; text-decoration: none; font-weight: 600; }
-        nav a.active, nav a:hover { color: #FFD700; text-decoration: underline; }
-        .container { max-width: 1100px; margin: 30px auto; }
-        .section-title { color: goldenrod; text-align: center; margin-bottom: 25px; font-size: 2rem; }
-        .image-placeholder { background: #eee; border: 2px dashed goldenrod; height: 150px;
-            margin: 15px 0; display: flex; align-items: center; justify-content: center; color: #aaa; }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Storino - ستورينو</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="text-center">
-    <h1>Storino VIP</h1>
-    <nav>
-        <a href="index.html" class="active">Accueil</a>
-        <a href="about.html">À propos</a>
-        <a href="services.html">Services</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+  <header>
+    <h1>ستورينو - Storino 🏠</h1>
+    <p>محترفون في صناعة وتثبيت جميع أنواع الستائر والديكورات 🎨</p>
+    <p><em>Professionnels dans la fabrication et l'installation de tous types de rideaux et de décorations</em></p>
+  <img src="logo.png" alt="Storino VIP logo" style="max-width:200px; margin: 1rem auto; display:block;">
 </header>
-<div class="container">
-    <section>
-        <h2 class="section-title">Bienvenue chez Storino VIP</h2>
-        <p>Votre partenaire de confiance pour des stores en aluminium de haute qualité, adaptés aux entreprises, banques, grandes fenêtres, commerces et résidences.</p>
-        <div class="image-placeholder">Image principale – à insérer ici</div>
-    </section>
-    <section>
-        <h3 class="section-title">Nos points forts</h3>
-        <ul>
-            <li>Qualité supérieure des matériaux</li>
-            <li>Conception sur mesure adaptée à chaque client</li>
-            <li>Installation rapide et professionnelle</li>
-            <li>Service client disponible et réactif</li>
-        </ul>
-        <div class="image-placeholder">Image 2 – à insérer ici</div>
-        <div class="image-placeholder">Image 3 – à insérer ici</div>
-    </section>
-    <section>
-        <h3 class="section-title">Contact rapide</h3>
-        <p>Appelez-nous pour un devis gratuit : <strong>+212 660 302 395</strong></p>
-    </section>
-</div>
-<footer class="text-center">
-    <p>© 2025 Storino VIP – Tous droits réservés | contact@storino-vip.com | +212 660 302 395</p>
-</footer>
+
+  <section class="section">
+    <h2>من نحن - Qui sommes-nous</h2>
+    <div class="dual">
+      <p>نحن متخصصون في تقديم أفضل الحلول للديكور الداخلي بمدينة أكادير.</p>
+      <p class="fr">Nous sommes spécialisés dans les meilleures solutions de décoration intérieure à Agadir.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>خدماتنا - Nos services</h2>
+    <div class="dual">
+      <p>تصميم وتفصيل الستائر حسب الطلب، تركيب الستائر، أعمال الخياطة والتطريز.</p>
+      <p class="fr">Conception et confection de rideaux sur mesure, installation de rideaux, couture et broderie.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>صور من أعمالنا - Galerie</h2>
+    <div class="slider">
+      <img src="https://via.placeholder.com/600x300?text=Travail+1" class="slide" />
+      <img src="https://via.placeholder.com/600x300?text=Travail+2" class="slide" />
+      <img src="https://via.placeholder.com/600x300?text=Travail+3" class="slide" />
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>موقعنا - Notre localisation</h2>
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13432.25590541802!2d-9.5981075!3d30.4277559!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdb3b6db!2sAgadir!5e0!3m2!1sfr!2sma!4v0000000000000"
+      width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+    </iframe>
+  </section>
+
+  <section class="section">
+    <h2>تواصل معنا - Contactez-nous</h2>
+    <div class="dual">
+      <p>رقم الهاتف: 0660302395</p>
+      <p class="fr">Téléphone : 0660302395</p>
+      <p>العنوان: حي السلام، أكادير</p>
+      <p class="fr">Adresse : Hay Salam, Agadir</p>
+<p>البريد الإلكتروني: storinovip@gmail.com</p>
+<p class="fr">Email : storinovip@gmail.com</p>
+    </div>
+    <a href="https://wa.me/212660302395" class="whatsapp-button">تحدث معنا على واتساب</a>
+  </section>
+
+  <footer>
+    <p>جميع الحقوق محفوظة © ستورينو 2025</p>
+    <p><em>Tous droits réservés © Storino 2025</em></p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
