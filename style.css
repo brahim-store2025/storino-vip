@@ -6,10 +6,8 @@ body {
   padding: 0;
 }
 header {
-  background-color: #004d40;
-  color: white;
-  padding: 2rem;
-  text-align: center;
+  background-color: #d4f4d2;
+  color: #2e7d32;
 }
 .section {
   padding: 2rem;
@@ -21,13 +19,22 @@ header {
 .section h2 {
   color: #00695c;
 }
-.dual p {
-  margin: 0.5rem 0;
+ul {
+  list-style: none;
+  padding: 0;
 }
-.dual .fr {
-  color: #777;
-  font-style: italic;
+ul li {
+  padding: 0.5rem 0;
 }
+.whatsapp-button, .facebook-button {
+  display: inline-block;
+  margin: 0.5rem 0.5rem 0 0;
+  padding: 0.8rem 1.2rem;
+  text-decoration: none;
+  border-radius: 5px;
+}
+.whatsapp-button { background-color: #25D366; color: white; }
+.facebook-button { background-color: #1877F2; color: white; }
 .slider {
   display: flex;
   overflow: hidden;
@@ -43,13 +50,4 @@ footer {
   text-align: center;
   padding: 1rem;
   margin-top: 2rem;
-}
-.whatsapp-button {
-  display: inline-block;
-  background-color: #25D366;
-  color: white;
-  padding: 0.8rem 1.2rem;
-  margin-top: 1rem;
-  text-decoration: none;
-  border-radius: 5px;
 }
