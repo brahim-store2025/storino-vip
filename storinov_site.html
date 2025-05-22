@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ستورنوف - Storinov</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #ffffff;
+      color: #222;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #002b5b;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      margin: 0;
+    }
+    nav a {
+      color: white;
+      margin-left: 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 40px 20px;
+    }
+    .gallery {
+      text-align: center;
+    }
+    .gallery img {
+      max-width: 80%;
+      margin: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.5s;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+    .clock {
+      font-size: 2em;
+      text-align: center;
+      color: #d4af37;
+      margin-top: 30px;
+    }
+    .contact {
+      text-align: center;
+      background-color: #f8f8f8;
+      padding: 20px;
+      margin-top: 40px;
+      border-top: 2px solid #ccc;
+    }
+    .contact p {
+      margin: 5px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Storinov</h1>
+    <nav>
+      <a href="#accueil">الصفحة الرئيسية | Accueil</a>
+      <a href="#about">من نحن | Qui sommes-nous</a>
+      <a href="#services">خدماتنا | Nos services</a>
+      <a href="#contact">اتصل بنا | Contactez-nous</a>
+    </nav>
+  </header>
+
+  <section id="accueil">
+    <h2>مرحبا بكم في ستورنوف | Bienvenue chez Storinov</h2>
+    <div class="gallery">
+      <img src="image1.jpg" alt="store rideaux 1">
+      <img src="image2.jpg" alt="store cuisine 2">
+    </div>
+    <div class="clock" id="clock"></div>
+  </section>
+
+  <section id="about">
+    <h2>من نحن | Qui sommes-nous</h2>
+    <p>نحن شركة مغربية متخصصة في الستائر وتغطيات الشمس. | Nous sommes une entreprise marocaine spécialisée dans les stores et protections solaires.</p>
+  </section>
+
+  <section id="services">
+    <h2>خدماتنا | Nos services</h2>
+    <p>تصميم، تصنيع وتركيب الستائر الداخلية والخارجية حسب الطلب. | Conception, fabrication et installation de stores intérieurs et extérieurs sur mesure.</p>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>اتصل بنا | Contactez-nous</h2>
+    <p>الهاتف: 06 00 00 00 00</p>
+    <p>البريد الإلكتروني: storinov@gmail.com</p>
+    <p>العنوان: المغرب، أكادير</p>
+  </section>
+
+  <script>
+    function updateClock() {
+      const now = new Date();
+      const clock = document.getElementById('clock');
+      clock.textContent = now.toLocaleTimeString();
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+  </script>
+</body>
+</html>
