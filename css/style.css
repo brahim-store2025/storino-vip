@@ -1,199 +1,90 @@
-/* التصميم العام */
+
 body {
     font-family: 'Tajawal', sans-serif;
-    background: linear-gradient(135deg, #FF7A00 0%, #FFB347 100%);
+    background: linear-gradient(to right, #fff4e6, #ffe0b2);
     margin: 0;
     padding: 0;
-    color: #333;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-/* الروابط الرئيسية */
-.main-nav {
-    background: #FF5E00;
-    padding: 10px 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
-.main-nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-.main-nav a:hover {
-    color: #FFD700;
-}
-
-/* تذييل */
-footer {
-    background: #FF7A00;
-    color: white;
     text-align: center;
-    padding: 15px 0;
-    margin-top: auto;
+    color: #333;
 }
 
-/* الرأس */
 header {
-    background: #FF5E00;
+    background: linear-gradient(to right, #ff9800, #ff5722);
     color: white;
-    padding: 20px 10px;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    padding: 30px;
+    border-bottom: 5px solid #e65100;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
-header h1 {
-    margin: 0;
-    font-size: 2.5rem;
+h1, h2, h3 {
+    margin: 0.5em 0;
 }
 
-header p {
-    margin: 5px 0 0 0;
-    font-size: 1rem;
-    opacity: 0.9;
-}
-
-/* قسم الهيرو */
-.hero {
-    margin: 20px auto;
-    max-width: 600px;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-    transition: transform 0.3s ease;
-}
-
-.hero img {
-    width: 100%;
-    display: block;
-    transition: transform 0.5s ease;
-}
-
-.hero:hover img {
-    transform: scale(1.05);
-}
-
-.cta {
-    background: rgba(255,255,255,0.9);
-    padding: 15px 0;
-}
-
-/* زر واتساب */
 .whatsapp-btn {
     background: #25D366;
     color: white;
-    padding: 15px 25px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background 0.3s, transform 0.3s;
-}
-
-.whatsapp-btn:hover {
-    background: #1ebe5c;
-    transform: translateY(-3px);
-}
-
-/* العداد */
-.counter {
-    background: rgba(255,255,255,0.85);
-    margin: 20px auto;
-    padding: 15px;
+    padding: 18px 30px;
     border-radius: 12px;
-    font-weight: 600;
-    color: #FF5E00;
-    max-width: 300px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 25px;
+    font-weight: bold;
+    font-size: 1.3em;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
 }
-
-.counter:hover {
-    transform: scale(1.02);
+.whatsapp-btn:hover {
+    transform: scale(1.1);
 }
 
-/* القائمة */
+/* Email contact */
+.email-contact {
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+.email-contact a {
+    color: #ff5722;
+    text-decoration: none;
+    font-weight: bold;
+}
+.email-contact a:hover {
+    text-decoration: underline;
+}
+
 .food-category {
-    margin: 30px 0;
+    margin: 50px 0;
+    animation: fadeInUp 1s ease forwards;
 }
 
 .item {
     display: inline-block;
-    width: 200px;
-    margin: 15px;
-    padding: 15px;
+    width: 250px;
+    margin: 20px;
+    padding: 20px;
     background: white;
-    border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     transition: transform 0.3s ease;
 }
-
 .item:hover {
-    transform: translateY(-5px);
+    transform: scale(1.05);
 }
 
 .item img {
     width: 100%;
-    border-radius: 8px;
+    border-radius: 10px;
 }
 
-/* من نحن */
-.delivery-info ul {
-    list-style: none;
-    padding: 0;
+.counter {
+    background: #ffe0b2;
+    padding: 20px;
+    margin: 30px;
+    border-radius: 12px;
+    font-size: 1.3em;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
 }
 
-.delivery-info li::before {
-    content: "✅ ";
-}
-
-/* الاتصال */
-.contact {
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 0 10px;
-}
-
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin: 15px 0;
-}
-
-.contact-form input,
-.contact-form textarea {
-    padding: 10px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    font-size: 1rem;
-}
-
-.contact-form button {
-    background: #FF5E00;
-    color: white;
-    padding: 12px;
-    border: none;
-    border-radius: 8px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.3s, transform 0.3s;
-}
-
-.contact-form button:hover {
-    background: #e55400;
-    transform: translateY(-2px);
-}
-
-/* تجاوب */
-@media (max-width: 600px) {
-    header h1 { font-size: 2rem; }
-    .main-nav { flex-direction: column; gap: 10px; }
-    .hero { width: 90%; }
-    .food-category .item { width: 45%; }
-    .contact { width: 90%; }
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
 }
