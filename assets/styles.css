@@ -1,0 +1,78 @@
+
+:root {
+    --color1: #FF914D;
+    --color2: #FFD93D;
+    --color3: #6BCB77;
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #fff;
+    color: #333;
+}
+header {
+    background-color: var(--color1);
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+header img {
+    max-width: 180px;
+    margin-bottom: 10px;
+}
+h1 {
+    font-size: 2.8em;
+    margin: 10px 0;
+}
+nav {
+    margin: 20px 0;
+}
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+.section {
+    padding: 30px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+.section img {
+    width: 100%;
+    max-width: 600px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+footer {
+    background-color: var(--color3);
+    text-align: center;
+    padding: 15px;
+    color: white;
+}
+.clock, .counter {
+    margin: 15px 0;
+    font-size: 1.2em;
+}
+.animated {
+    animation: fadeInUp 1.5s ease-out;
+}
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.emoji {
+    font-size: 1.5em;
+    display: block;
+    margin: 10px 0;
+}
