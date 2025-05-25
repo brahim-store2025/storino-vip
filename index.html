@@ -60,7 +60,7 @@
 
     <header>
         <img src="assets/images/logo.png" alt="Logo">
-        <h1>ستورينو VIP - مطعم سحابي</h1>
+        <h1 style="font-size: 64px; text-align:center;">ستورينو VIP - مطعم سحابي</h1>
         <nav>
             <a href="index.html">الرئيسية / Accueil</a>
             <a href="about.html">من نحن / À propos</a>
@@ -79,7 +79,7 @@
 
 <div style="position:fixed;bottom:20px;right:20px;z-index:1000;">
   <a href="https://wa.me/212660302395" target="_blank" style="display:flex;align-items:center;text-decoration:none;">
-    <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp" style="width:48px;height:48px;margin-right:8px;">
+    <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp" style="width:48px;height:48px;margin-right:8px; width:100%; max-width:100%; height:auto;">
     <span style="font-size:16px;color:#25D366;">٠٦٦٠٣٠٢٣٩٥</span>
   </a>
 </div>
@@ -87,28 +87,43 @@
 
 <div id="clock" class="digital-display">00:00:00</div>
 <script>
-  function updateClock() {
-    const now = new Date();
-    const h = String(now.getHours()).padStart(2, '0');
-    const m = String(now.getMinutes()).padStart(2, '0');
-    const s = String(now.getSeconds()).padStart(2, '0');
-    document.getElementById('clock').textContent = `${h}:${m}:${s}`;
+  
+function updateClock() {
+  const now = new Date().toLocaleString("en-GB", { timeZone: "Africa/Casablanca" });
+  const utc = new Date().toLocaleString("en-GB", { timeZone: "Africa/Casablanca" }) + now.getTimezoneOffset() * 60000); // تحويل إلى توقيت UTC
+  const h = String(utc.getHours()).padStart(2, '0');
+  const m = String(utc.getMinutes()).padStart(2, '0');
+  const s = String(utc.getSeconds()).padStart(2, '0');
+  document.getElementById('clock').textContent = `${h}:${m}:${s}`;
+}
+:${m}:${s}`;
   }
   setInterval(updateClock, 1000);
   updateClock();
 </script>
 
-<div id="visitorCounter" class="digital-display">Visitors: 0</div>
+
+<div id="visitorCounter" class="digital-display">Visitors: 196</div>
 <script>
-  const counterKey = 'site-visitor-count';
-  let count = localStorage.getItem(counterKey);
-  count = count ? parseInt(count) + 1 : 1;
-  localStorage.setItem(counterKey, count);
-  document.getElementById('visitorCounter').textContent = "Visitors: " + count;
+  let visitorCount = 196;
+  function updateVisitorCounter() {
+    visitorCount += 2;
+    document.getElementById("visitorCounter").textContent = "Visitors: " + visitorCount;
+  }
+  setInterval(updateVisitorCounter, 30000); // كل 30 ثانية
 </script>
 
+
+
+<script>
+let count = 1401;
+setInterval(() => {
+  count += 2;
+  document.getElementById('visitor-count').innerText = count;
+}, 2500);
+</script>
 </body>
 </html><section class="gallery" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;padding:2rem;">
-      <img src="assets/images/gallery1.jpg" alt="Gallery Image 1" style="width:100%;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.1);">
-      <img src="assets/images/gallery2.jpg" alt="Gallery Image 2" style="width:100%;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+      <img src="assets/images/gallery1.jpg" alt="Gallery Image 1" style="width:100%;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.1); width:100%; max-width:100%; height:auto;">
+      <img src="assets/images/gallery2.jpg" alt="Gallery Image 2" style="width:100%;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.1); width:100%; max-width:100%; height:auto;">
     </section>
